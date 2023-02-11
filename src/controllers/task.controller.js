@@ -25,6 +25,7 @@ router.post("/", authenticate, async (req, res) => {
       time: current,
       userId: req.user._id,
     });
+    // console.log(task);
     return res.status(201).send({ task, message: "task successfully created" });
   } catch (error) {}
 });
