@@ -31,7 +31,10 @@ router.post("/", authenticate, async (req, res) => {
 
 router.get("/", authenticate, async (req, res) => {
   try {
-    const current = new Date()
+    const date = new Date();
+    const offset = 5.5 * 60 * 60 * 1000; // offset in milliseconds
+    const istTime = new Date(date.getTime() + offset);
+    const current = istTime
       .toString()
       .split(" ")
       .filter((e, i) => i <= 3)
