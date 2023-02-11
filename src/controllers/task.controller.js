@@ -22,7 +22,6 @@ router.post("/", authenticate, async (req, res) => {
     }
     const task = await Task.create({
       ...req.body,
-      time: current,
       userId: req.user._id,
     });
     // console.log(task);
