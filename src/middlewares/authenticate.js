@@ -36,7 +36,7 @@ module.exports = async (req, res, next) => {
   }
 
   req.user = result.user;
-  console.log(req.user);
+  // console.log(req.user);
 
   next();
 };
